@@ -40,8 +40,8 @@ class BarangResource extends Resource
         return $table
             ->columns([
                 TextColumn::make('nama'),
-                TextColumn::make('kategori_id'),
-                TextColumn::make('supplier_id'),
+                TextColumn::make('kategori.kategori'),
+                TextColumn::make('supplier.nama'),
                 TextColumn::make('harga'),
                 TextColumn::make('stok'),
             ])
@@ -70,8 +70,8 @@ class BarangResource extends Resource
     {
         return [
             'index' => Pages\ListBarangs::route('/'),
-            'create' => Pages\CreateBarang::route('/create'),
-            'edit' => Pages\EditBarang::route('/{record}/edit'),
+            // 'create' => Pages\CreateBarang::route('/create'),
+            // 'edit' => Pages\EditBarang::route('/{record}/edit'),
         ];
     }    
 }

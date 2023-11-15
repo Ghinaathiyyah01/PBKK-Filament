@@ -28,8 +28,16 @@ class AdminPanelProvider extends PanelProvider
             ->path('admin')
             ->login()
             ->colors([
-                'primary' => Color::Amber,
-            ])
+                'primary' => Color::Red, // Warna merah
+        'accent' => Color::Blue, // Warna aksen (misalnya, biru)
+        'background' => '#f5f5f5', // Warna latar belakang (contoh nilai warna CSS)
+        'foreground' => '#333333', // Warna teks dan elemen depan (contoh nilai warna CSS)
+        'highlight' => Color::Yellow, // Warna sorot (misalnya, kuning)
+        'muted' => '#999999', // Warna yang redup (contoh nilai warna CSS)
+        'success' => Color::Green, // Warna sukses (misalnya, hijau)
+        'warning' => Color::Orange, // Warna peringatan (misalnya, oranye)
+        'error' => Color::Red,
+                ])
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\\Filament\\Resources')
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\\Filament\\Pages')
             ->pages([

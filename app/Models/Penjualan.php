@@ -12,7 +12,8 @@ class Penjualan extends Model
 
     protected $fillable = ['tanggal','barang_id','jumlah','total'];
 
-    public function Barang(): BelongsTo{
+    public function Barang(): BelongsTo
+    {
         return $this->belongsTo(Barang::class);
     }
 }
